@@ -1,0 +1,133 @@
+.heroSection {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.parallaxBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.vintageTitle {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    line-height: 1.6;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 4rem;
+    max-width: 900px;
+}
+
+.titleHighlight {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.vintageForm {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    background: transparent;
+}
+
+.vintageInput {
+    flex-grow: 1;
+    padding: 22px 28px;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: #000;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    letter-spacing: 0.05em;
+}
+
+.vintageInput::placeholder {
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+}
+
+.vintageButton {
+    padding: 22px 50px;
+    font-size: 0.95rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.vintageButton:hover {
+    background: #fff;
+    color: #000;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .vintageForm {
+        flex-direction: column;
+    }
+
+    .vintageInput {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .vintageButton {
+        width: 100%;
+        border-left: 1px solid #fff;
+        margin-top: 15px;
+    }
+}
