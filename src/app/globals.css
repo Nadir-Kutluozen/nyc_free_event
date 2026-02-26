@@ -1,10 +1,18 @@
 :root {
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-serif: "Times New Roman", Times, serif;
+  --bg-color: #F7F5F0;
+  /* Linen / Warm off-white */
+  --text-color: #1C1917;
+  /* Deep Espresso / Charcoal */
+  --border-color: #1C1917;
+  /* Same as text for sharp magazine lines */
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "Playfair Display", "Times New Roman", Times, serif;
 }
 
 html,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
